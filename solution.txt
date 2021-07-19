@@ -1,0 +1,55 @@
+1. Create a local repository and 3 text files into it. 
+-> $ mkdir GitAssignment
+   $ cd GitAssignment
+   $ git init
+   $ notepad file1.txt
+   $ notepad file2.txt
+   $ notepad file3.txt
+   $ notepad file.txt
+   $ git add file.txt
+   $ git commit -m "commit"
+
+2. Create 2 braches as Dev and Test.
+-> $ git branch Dev
+   $ git branch Test
+   $ git branch
+
+3. Commit 1 file into Dev and 2 files into Test.
+->  $ git checkout Dev
+    $ git add file1.txt
+    $ git commit -m "initail commit of file1"
+    $ git checkout Test
+    $ git add file2.txt
+    $ git add file3.txt
+    $ git commit -m "initail commit of file2 and file3"
+
+4. Modify 1st file some text.
+-> $ git checkout Dev
+   $ notepad file1.txt
+   $ git add file1.txt
+   $ git commit -m "modified commit of file1"
+
+5. Check differences and status.
+-> $ git diff f8475099811b362e8e56afd4ac5037fa9147fe1e
+   $ git status
+
+6. Finally merge all together in a master branch.
+-> $ git checkout master
+   $ git merge Dev Test
+   $ git log
+
+7. Push this repository on your github.
+-> $ git remote add origin https://github.com/Himani-ja/gitAssignment.git
+   $ git push -u origin master
+
+8. Create a clone for this repo from github to local system with another location.
+-> $ cd ..
+   $ git clone https://github.com/Himani-ja/gitAssignment.git
+
+9. Create a new file as Solution.txt in this cloned repository. 
+-> $ notepad solution.txt
+   $ git add solution.txt
+   $ git commit -m "commit of solution file"
+
+11. Push the changes to github again in same repository.
+-> $ git push -u origin master
